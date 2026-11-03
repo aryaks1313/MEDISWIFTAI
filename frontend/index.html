@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediSwift AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <h1>MediSwift AI</h1>
+    <p>Medicine ordering with pharmacist review</p>
+</header>
+
+<main class="container">
+    <section id="auth-section" class="panel">
+        <h2>Login</h2>
+
+        
+<form id="login-form">
+    <label>Email</label>
+    <input id="login-email" type="email" required
+           placeholder="customer@mediswift.demo">
+
+    <label>Password</label>
+    <input id="login-password" type="password" required
+           placeholder="Enter password">
+
+    <button type="submit">Login</button>
+</form>
+
+<p>
+    Don't have an account?
+    <button type="button" id="show-register-button" class="secondary">
+        Register
+    </button>
+</p>
+
+<form id="register-form" class="hidden">
+    <h2>Create Account</h2>
+
+    <label>Full Name</label>
+    <input id="register-name" type="text" required
+           minlength="2" placeholder="Enter your name">
+
+    <label>Email</label>
+    <input id="register-email" type="email" required
+           placeholder="Enter your email">
+
+    <label>Password</label>
+    <input id="register-password" type="password" required
+           minlength="8" placeholder="Minimum 8 characters">
+
+    <label>Register As</label>
+    <select id="register-role" required>
+        <option value="customer">Customer</option>
+        <option value="shop_owner">Pharmacy Owner</option>
+        <option value="delivery_person">Delivery Person</option>
+    </select>
+
+    <button type="submit">Create Account</button>
+
+    <button type="button" id="show-login-button" class="secondary">
+        Back to Login
+    </button>
+</form>
+
+
+        <p id="auth-message" class="message"></p>
+    </section>
+
+    <section id="app-section" class="hidden">
+        <div class="panel user-bar">
+            <div>
+                <strong id="user-name"></strong>
+                <span id="user-role"></span>
+            </div>
+            <button id="logout-button" class="secondary">Logout</button>
+        </div>
+
+        <section class="panel">
+            <h2>Find medicines</h2>
+            <input id="medicine-search" type="search"
+                   placeholder="Search by medicine or generic name">
+            <div id="medicine-list" class="medicine-grid"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Your cart</h2>
+            <div id="cart-list"></div>
+            <p id="cart-total">Total: ₹0.00</p>
+
+            <label>Delivery address</label>
+            <textarea id="delivery-address" rows="3"
+                      placeholder="Enter delivery address"></textarea>
+
+            <label>Prescription ID (if required)</label>
+            <input id="prescription-id" type="number"
+                   placeholder="Upload prescription first">
+
+            <button id="place-order-button">Place order</button>
+            <p id="order-message" class="message"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Upload prescription</h2>
+            <p>
+                Upload a prescription image or PDF. AI/OCR extraction is
+                not automatically performed by this starter version.
+                Pharmacist review is required.
+            </p>
+
+            <form id="prescription-form">
+                <input id="prescription-file" type="file"
+                       accept=".jpg,.jpeg,.png,.webp,.pdf" required>
+
+                <label>Medicine preference</label>
+                <select id="medicine-preference">
+                    <option value="exact_brand">Exact brand preferred</option>
+                    <option value="lower_cost">Lower-cost options for review</option>
+                    <option value="all_options" selected>Show all options</option>
+                </select>
+
+                <button type="submit">Upload prescription</button>
+            </form>
+            <p id="prescription-message" class="message"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Your orders</h2>
+            <button id="refresh-orders-button" class="secondary">
+                Refresh orders
+            </button>
+            <div id="orders-list"></div>
+        </section>
+    </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #1f2937;
+}
+
+.header {
+    padding: 28px 20px;
+    background: #0f766e;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.container {
+    width: min(1100px, 94%);
+    margin: 24px auto;
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    color: #0f766e;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 7px;
+    background: #0f766e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #115e59;
+}
+
+button.secondary {
+    background: #475569;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.user-bar span {
+    display: block;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.medicine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.medicine-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.medicine-card h3 {
+    margin: 0 0 8px;
+}
+
+.medicine-card p {
+    margin: 6px 0;
+    color: #475569;
+}
+
+.cart-item,
+.order-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.message {
+    color: #0f766e;
+    overflow-wrap: anywhere;
+}
+
+.error {
+    color: #b91c1c;
+}
+
+@media (max-width: 600px) {
+    .panel {
+        padding: 16px;
+    }
+
+    .user-bar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
