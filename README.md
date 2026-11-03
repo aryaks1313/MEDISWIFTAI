@@ -142,4 +142,6 @@ requirements.txt
 - `python -m backend.test_db` checks the configured database connection.
 - Prescription image OCR is not implemented. The analyze endpoint accepts extracted text as form data.
 - CrewAI analysis requires a provider configuration such as `OPENAI_API_KEY`; without it, the API returns catalogue candidates and still requires pharmacist review.
-- Before any deployment, configure restrictive CORS origins, a strong JWT secret, secure database credentials, private prescription-file storage, and appropriate access controls. The current app is a local demo, not a production-ready patient-data service.
+- Before any deployment, configure restrictive CORS origins, a strong JWT secret, secure database credentials, private prescription-file storage, and appropriate access controls. The current app is a local demo, not a production-ready pat
+
+ient-data service.
